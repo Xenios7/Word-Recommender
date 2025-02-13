@@ -20,14 +20,19 @@ The **Word Recommendator** is a Java-based application that provides word recomm
 ### **1️⃣ Build & Run the Project**
 Ensure you have **Java 17 or later** installed.
 
+Compile the Java files:
 ```bash
-mvn clean install
-mvn spring-boot:run
+javac WordRecommendator.java TrieWithRobinhood.java
+```
+
+Run the program:
+```bash
+java WordRecommendator
 ```
 
 ### **2️⃣ Input Word Data**
 - The program will prompt you to enter a filename.
-- Ensure the file contains words separated by spaces or new lines.
+- Ensure the file contains words separated by spaces or new lines.(I used a dictionary)
 
 ### **3️⃣ Choose an Option**
 Upon running, the application provides two options:
@@ -36,9 +41,12 @@ Upon running, the application provides two options:
 
 #### Example:
 ```bash
+Welcome to the Word Recommendator
+Please enter the file name: dictionary.txt
 1 -> Find Similar Words
 2 -> Most Important Words
 Enter your choice: 1
+Enter the number of suggestions and then your word (or type 'exit' to quit): 5 hello
 ```
 
 ### **4️⃣ Find Similar Words**
@@ -61,16 +69,10 @@ Example input:
 ## 🏗 Project Structure
 ```
 WordRecommendator/
-│── src/
-│   ├── main/
-│   │   ├── java/com/wordrecommendator/
-│   │   │   ├── DemoApplication.java
-│   │   │   ├── TrieWithRobinhood.java
-│   │   │   ├── WordRecommendator.java
-│   │   ├── resources/
-│   │   │   ├── application.properties
-│── pom.xml
-│── README.md
+├── WordRecommendator.java     # Main program entry point
+├── TrieWithRobinhood.java     # Trie implementation with Robin Hood Hashing
+├── dictionary.txt             # Sample dictionary file
+└── README.md                  # Project documentation
 ```
 
 ## 🔧 Configuration
